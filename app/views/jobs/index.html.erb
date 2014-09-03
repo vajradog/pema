@@ -1,1 +1,13 @@
-Hello
+<div class="row">
+  
+<%= link_to "New Job", new_job_path %> <hr>
+
+<% @jobs.each do |job| %>
+  <%= link_to job.title, job_path(job) %> <br>
+  <%= job.description %> <br>
+  <%= job.duties if job.duties %> <br>
+  <%= job.close if job.close %> <br>
+  <%= link_to 'Edit', edit_job_path(job) %> |
+  <%= link_to 'Delete', job, method: :delete, data: { confirm: "are you sure ?"}, title: job.title %> <hr>
+<% end %>
+</div>

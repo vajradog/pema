@@ -1,1 +1,13 @@
-new
+<div class= "row">
+<%= form_for @job do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %> <br>
+  <%= f.label :description %>
+  <%= f.text_area :description %> <br>
+  <%= f.label :duties %>
+  <%= f.text_area :duties %> <br>
+  <%= f.label :close %>
+  <%= f.date_field :close %>
+  <%= f.submit %>
+<% end %>
+</div>

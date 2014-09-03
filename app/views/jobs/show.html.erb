@@ -1,1 +1,9 @@
-show
+<div class="row">
+<%= link_to "home page", root_path %> <br>
+
+  <%= @job.title %> <br>
+  <%= simple_format(@job.description) %> <br>
+  <%= @job.try(:duties) %> <br>
+  <%= @job.try(:close) %><hr>
+  <%= link_to "Edit", edit_job_path %>
+</div>
