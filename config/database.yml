@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: applitrack_development
+  pool: 5
+  username: vajradog
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: applitrack_test
+  pool: 5
+  username: vajradog
+  password:
